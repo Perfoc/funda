@@ -70,14 +70,14 @@ var filter = m => m.author.id === message.author.id;
                        .setAuthor(message.author.username, message.author.avatarURL)
                        .setTitle(title)
                        .setColor("#f558c9")
-            .setFooter("(TrexBot çekiliş sistemi)")
+            .setFooter("(Funda çekiliş sistemi)")
                        .addField('Çekiliş Bitti !🎉',`Kazanan : ${gFilter} \nBitiş zamanı :`)
                        .setTimestamp()
                      m.edit('** 🎉 ÇEKİLİŞ BİTTİ 🎉**' , {embed: endEmbed});
                        
                        var embedLel = new Discord.RichEmbed()
                         .setColor("#f558c9")
-                        .setDescription("Ödülünü Moderatörleri Etiketleyerek Alabilirsin!").setFooter("(TrexBot çekiliş sistemi)")
+                        .setDescription("Ödülünü Moderatörleri Etiketleyerek Alabilirsin!").setFooter("(Funda çekiliş sistemi)")
                     message.guild.channels.find("name" , room).send(`**Tebrikler ${gFilter}! \`${title}\` kazandın!**` , embedLel)
                 }, ms(duration));
             });
