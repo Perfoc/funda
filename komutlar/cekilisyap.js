@@ -59,7 +59,7 @@ var filter = m => m.author.id === message.author.id;
                   let giveEmbed = new Discord.RichEmbed()
                   .setColor("#f558c9")
                   .setDescription(`**Ödül: ${title}** \n🎉'a Basarak Katıl \nKalan Süre : ${duration} \n **Başlama Zamanı :** ${hours}:${minutes}:${seconds} ${suffix}`)
-                  .setFooter(message.author.username + " (TrexBot çekiliş sistemi)", message.author.avatarURL);
+                  .setFooter(message.author.username + " (Funda çekiliş sistemi)", message.author.avatarURL);
                   message.guild.channels.find("name" , room).send(' :heavy_check_mark: **ÇEKİLİŞ BAŞLADI** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
                      let re = m.react('🎉');
                      setTimeout(() => {
