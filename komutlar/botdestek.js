@@ -65,7 +65,7 @@ const emoji = message.client.emojis.get('');
 };
 
 exports.help = {
-  name: 'canlıdestek',
+  name: 'botdestek',
   description: 'Canlı Destek Tablebi Oluşturur.',
-  usage: 'canlıdestek'
+  usage: 'botdestek'
 };
