@@ -25,11 +25,14 @@ exports.run = (message, bot) => {
 }
 
 exports.conf = {
-  userPerm: [],
-  botPerm: ["SEND_MESSAGES"],
-  coolDown: 0,
-  dm: false,
-  category: "tag",
-  help: "Sunucuya Tag Eklemenize Yarar.",
-  args: "Tag",
-}
+  enabled: true,
+  guildOnly: false,
+  aliases: [],
+  permLevel: 2
+};
+
+exports.help = {
+  name: 'tag',
+  description: 'Sunucuya Tag Eklemenize Yarar.',
+  usage: 'tag'
+};
