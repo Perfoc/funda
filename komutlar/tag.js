@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
 exports.run = (message, bot) => {
-  let prefix = message.guild.prefix
   if (!message.args[0]) return message.channel.send("Tag eklemek için: `" + prefix + "tag <tag adı> <tagın metini>`");
   let tags = message.guild.tags
   if (Object.keys(tags).length > 100) return send("**Sunucu başına maksimum etiket sayısını aştınız: 100, önce birkaç tane sil**")
