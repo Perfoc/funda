@@ -12,7 +12,7 @@ var Random = [
 ];
 var zaratt = Math.floor(Math.random()*Random.length);
 const zarat= new Discord.RichEmbed()
-//.setDescription(`${Random[zaratt]}`)
+.setDescription(`${Random[zaratt]}`)
 .setColor(0xe2ff00)
 //.setTimestamp()
 message.channel.send(zarat)
