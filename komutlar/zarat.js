@@ -25,5 +25,5 @@ permLevel: 0
 exports.help = {
 name: 'zarat',
 description: 'Zar atmaya yarar. (1 ve 6 arası)',
-usage: 'zatat'
+usage: 'zarat'
 };
