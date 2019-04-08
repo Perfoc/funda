@@ -12,8 +12,7 @@ var Random = [
 ];
 var zaratt = Math.floor(Math.random()*Random.length);
 const zarat= new Discord.RichEmbed()
-.setDescription('Çıkan sayı: ' + `${Random}`)
-.setColor(0xe2ff00)
+//.setColor(0xe2ff00)
 message.channel.send(zarat)
 };
 exports.conf = {
