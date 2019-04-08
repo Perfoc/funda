@@ -1,6 +1,6 @@
-const Social = require("../../structures/Social.js");
+const Social = require("../structures/Social.js");
 const { get } = require("snekfetch");
-const { version } = require("../../package.json");
+const { version } = require("../package.json");
 
 class kedi extends Social {
   constructor(...args) {
