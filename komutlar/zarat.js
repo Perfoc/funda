@@ -12,7 +12,7 @@ var Random = [
 ];
 var zaratt = Math.floor(Math.random()*Random.length);
 const zarat= new Discord.RichEmbed()
-//.setColor(0xe2ff00)
+.setColor(0x036992)
 message.channel.send(zarat)
 };
 exports.conf = {
