@@ -6,13 +6,13 @@ var Random = [
 ':one:',
 ':two:',
 ':three:',
-':four',
-':five',
+':four:',
+':five:',
 ':six:',
 ];
 var zaratt = Math.floor(Math.random()*Random.length);
 const zarat= new Discord.RichEmbed()
-.setDescription(`${Random[zaratt]}`)
+//.setDescription(`${Random[zaratt]}`)
 .setColor(0xe2ff00)
 message.channel.send(zarat)
 };
