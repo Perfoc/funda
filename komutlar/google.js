@@ -35,7 +35,7 @@ exports.run = (client, message) => {
                     .setAuthor(`Aranan: "${suffix}"`, `https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2000px-Google_%22G%22_Logo.svg.png`)
                     .setDescription(`**Adres**: [${link.title}](${link.href})\n**Açıklama**:\n${link.description}`)
                     .setTimestamp()
-                    .setFooter('Komut işlendi.', message.author.displayAvatarURL);
+                    .setFooter(`${message.author.username} Tarafından Komut Çağırıldı.`, message.author.displayAvatarURL);
                 return message.channel.send({
                     embed: embed
                 });
