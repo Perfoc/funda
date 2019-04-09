@@ -6,7 +6,7 @@ const emoji = message.client.emojis.get('');
       message.reply("`Birazdan Yetkili Ekibimiz Sizinle ilgilenicektir.Destek Almak İstediğiniz Konuyu Belirtmediyseniz Talebiniz Reddedilecektir.`");
       let mesaj = args.slice(0).join(' ');
       let chan = message.channel;
-      let destekKanal = "561293123603398656";
+      let destekKanal = "565190311211434004";
       const embed = new Discord.RichEmbed()
         .addField('Dikkat', `Canlı Destek Talebi`)
         .setAuthor(`${message.author.tag} (${message.author.id})`, `${message.author.avatarURL}`)
