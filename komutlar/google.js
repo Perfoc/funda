@@ -43,3 +43,16 @@ exports.run = (client, message) => {
         }
     });
 };
+
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+aliases: ['google'],
+  permLevel: 0
+};
+
+exports.help = {
+  name: 'google',
+  description: 'İstediğiniz şeyi Google da arar.',
+  usage: 'google [aramak istediğiniz şey] '
+};
