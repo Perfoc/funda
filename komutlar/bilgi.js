@@ -14,7 +14,7 @@ exports.run = (client, message) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Yapımcı: Perfo  - Bot Adı: **Funda **\n\n_**BOTU EKLEMEK İÇİN LİNK:**_\n\nhttps://discordapp.com/oauth2/authorize?client_id=476716836822712330&scope=bot&permissions=2146958847 \n\n_**Linkler:**_\n\n**Discord** sunucusunun davet linki: https://discord.gg/esZ3tYb \nBotun davet linki: https://discordapp.com/oauth2/authorize?client_id=476716836822712330&scope=bot&permissions=2146958847 \n\n**:copyright: 2019 Perfo**');
+    .setDescription('Yapımcı: Perfo  - Bot Adı: **Funda **\n\n_**BOTU EKLEMEK İÇİN LİNK:**_\n\nhttps://discordapp.com/oauth2/authorize?client_id=476716836822712330&scope=bot&permissions=2146958847 \n\n_**Linkler:**_\n\n**Discord** sunucusunun davet linki: https://discord.gg/xnSjkSk \n\n**:copyright: 2019 Perfo**');
     return message.author.sendEmbed(pingozel)
 };
 
