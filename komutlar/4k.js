@@ -3,7 +3,7 @@ const request = require('snekfetch');
 const fs = require("fs")
 
 exports.run = (client, message, args) => {
-    if (!message.channel.nsfw) return message.channel.send(":underage: NSFW Command. Please switch to NSFW channel in order to use this command.")
+    if (!message.channel.nsfw) return message.channel.send(":underage: NSFW Command. Please switch to NSFW channel in order to use this command.");
 
     var subreddits = [
         'NSFW_Wallpapers',
@@ -17,11 +17,11 @@ exports.run = (client, message, args) => {
     randomPuppy(sub)
         .then(url => {
             request.get(url).then(r => {
-                fs.writeFile(`4k.jpg`, r.body)
-                message.channel.sendFile(r.body)
-                fs.unlink(`./4k.jpg`)
-            })
-        })
+                fs.writeFile(`4k.jpg`, r.body);
+                message.channel.sendFile(r.body);
+                fs.unlink(`./4k.jpg`);
+            });
+        });
 };
 exports.conf = {
 enabled: true,
