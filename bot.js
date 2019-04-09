@@ -78,7 +78,7 @@ client.unload = command => {
 };
 
 client.on("message", msg => {
-var dm = client.channels.get("561292139347050507")
+var dm = client.channels.get("565190219633000458")
 if(msg.channel.type === "dm") {
 if(msg.author.id === client.user.id) return;
 const botdm = new Discord.RichEmbed()
