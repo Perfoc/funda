@@ -22,4 +22,16 @@ exports.run = (client, message, args) => {
                 fs.unlink(`./4k.jpg`)
             })
         })
-}
+};
+exports.conf = {
+enabled: true,
+guildOnly: false,
+aliases: [],
+permLevel: 0
+};
+
+exports.help = {
+name: '4k',
+description: '4K NSFW Fotoğrafı Verir.',
+usage: '4k'
+};
