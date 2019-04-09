@@ -1,3 +1,4 @@
+const Discord = require('discord.js');
 if (message.content === '?profile') {
       let botembed = new Discord.RichEmbed()
                 .setTitle("**__Kullanıcı Profili__**")
