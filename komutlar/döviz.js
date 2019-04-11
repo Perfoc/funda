@@ -241,18 +241,6 @@ embed.addField(`Satış`,res.satis,true)
 embed.addField(`Birim Kodu`,res.kod,true)
 message.channel.send({embed: embed});
    }
-    if(args[0] === "BTC"){
-const res = await Doviz.getKur("BTC");
-const tarih = await Doviz.guncelTarih();
-let embed = new Discord.RichEmbed()
-embed.setAuthor(`${res.isim} Güncel Kur Analizi`,message.author.avatarURL)
-embed.setDescription(`Bilgiler [Merkez Bankası(TCMB)](https://www.tcmb.gov.tr/kurlar/kurlar_tr.html) Üzerinden Çekilmektedir. \n \`\`${tarih}\`\` tarihinde güncellenmiştir.`)
-embed.setColor("RED")
-embed.addField(`Alış`,res.alis)
-embed.addField(`Satış`,res.satis,true)
-embed.addField(`Birim Kodu`,res.kod,true)
-message.channel.send({embed: embed});
-   }
 }
 
 
