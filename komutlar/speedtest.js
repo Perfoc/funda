@@ -28,8 +28,8 @@ Speedtestde Ölçülen Ping: **${data.server.ping}**`)
 Host: **${data.server.host}**
 Lokasyon: **${data.server.country}**,**${data.client.country}**
 Sağlayıcı Lokasyonu: **${data.server.location}**
-Sağlayıcı Sponsoru: **${data.server.sponsor}**`)
-.setAuthor(message.author.username, message.author.avatarURL)
+Sağlayıcı Sponsoru: **${data.server.sponsor}**
+Komutu Çalıştıran: **${message.author.username}**`)
   message.channel.send(embed)
 });
 
