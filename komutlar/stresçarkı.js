@@ -8,7 +8,7 @@ exports.run = async (client, message) => {
             color: 0x00AE86,
             description: `${message.author.tag} bir stres çarkı çevirdi!`,
             image: {
-                url: "https://i.imgur.com/KJJxVi4.gif"
+                url: "https://emoji.com.tr/wp-content/uploads/2017/05/stres-carki12.gif"
             }
         }
     });
@@ -18,7 +18,7 @@ exports.run = async (client, message) => {
         dönme.edit({
             embed: {
                 color: 0x00AE86,
-                description: `${message.author.tag}, stres çarkın ${bitiş.toFixed(2)} saniye döndü.`
+                description: `${message.author.tag}, stres çarkın ${bitiş.toFixed(2)} tur döndü.`
             }
         });
     }, 5 * 1000);
