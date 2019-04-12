@@ -29,6 +29,7 @@ Host: **${data.server.host}**
 Lokasyon: **${data.server.country}**,**${data.client.country}**
 Sağlayıcı Lokasyonu: **${data.server.location}**
 Sağlayıcı Sponsoru: **${data.server.sponsor}**`)
+('Komutu Çağıran Kişi: ' + ` ${message.author.tag}`)
   message.channel.send(embed)
 });
 
