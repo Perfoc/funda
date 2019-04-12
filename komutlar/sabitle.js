@@ -5,6 +5,7 @@ exports.run = async (client, message, args, level) => {
       let msg = messages.get(Array.from(messages.keys())[1]);
       msg.pin();
       message.channel.send('Mesaj sabitlendi.');
+      message.delete();
     });
   } catch (err) {
     message.channel.send('Bir hata oluştu!\n' + err).catch();
