@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = function(client, message) {
-    message.channel.send("Funda BOT için sponsor oldu: " + `https://memoryhackers.org`);
+    message.channel.send("Funda BOT bu site sayesinde yapılıyor: `MemoryHackers.org`");
 };
 
 exports.conf = {
