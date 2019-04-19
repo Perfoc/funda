@@ -1,9 +1,4 @@
 const Discord = require('discord.js');
-
-exports.run = (client, message, args) => {
-  let mesaj = args.slice(0).join(' ');
-if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
-  message.delete();
   message.channel.send('GENEL KOMUTLAR');
   message.channel.send('8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.');
   message.channel.send('atasözü: Rastgele atasözü verir.');
@@ -17,12 +12,6 @@ if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazma
   message.channel.send('çekiliş: Sunucunuzda çekiliş başlatmanıza yarar.');
   message.channel.send('BOT Admin Komutları');
   message.channel.send('dmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.');
-};
-	
-    }
-  }
-
-};
 
 exports.conf = {
   enabled: true,
