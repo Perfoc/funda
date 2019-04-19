@@ -20,7 +20,7 @@ exports.run = (client, message, params) => {
     let command = params[0];
     if (client.commands.has(command)) {
       command = client.commands.get(command);
-      message.author.sendCode('asciidoc', `= ${command.help.name} = \n${command.help.description}\nDoğru kullanım: ` + prefix + `${command.help.usage}`);
+      message.author.sendCode('GENEL KOMUTLAR\n8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.\natasözü: Rastgele atasözü verir.\navatar: Profil fotoğrafınızı büyük bir biçimde verir.\nbilgi: Bot hakkında bilgi verir.\nbotdestek: Botun kurucularına destek mesajı gönderir.\ndavet: Botu kendi sunucunuza davet edersiniz.\ndöviz: Döviz kurlarını gösterir.\nYÖNETİM KOMUTLARI\nban: Sunucunuzdan istediğiniz bir kişiyi engellemeye yarar.\nçekiliş: Sunucunuzda çekiliş başlatmanıza yarar.\nBOT Admin Komutları\ndmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.\n')
     }
   }
 
