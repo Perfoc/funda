@@ -1,38 +1,38 @@
 const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json');
-const fs = require("fs");
-exports.run = (client, message, params) => {
-var Random = [
-    'GENEL KOMUTLAR'
-    '8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.'
-    'atasözü: Rastgele atasözü verir.'
-    'avatar: Profil fotoğrafınızı büyük bir biçimde verir.'
-    'bilgi: Bot hakkında bilgi verir.'
-    'botdestek: Botun kurucularına destek mesajı gönderir.'
-    'davet: Botu kendi sunucunuza davet edersiniz.'
-    'döviz: Döviz kurlarını gösterir.'
-    'YÖNETİM KOMUTLARI'
-    'ban: Sunucunuzdan istediğiniz bir kişiyi engellemeye yarar.'
-    'çekiliş: Sunucunuzda çekiliş başlatmanıza yarar.'
-    'BOT Admin Komutları'
-    'dmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.';
-];
-var atasozuver = Math.floor(Math.random()*Random.length);
-const atasozu= new Discord.RichEmbed()
-.setDescription(`${Random[atasozuver]}`)
-.setColor(0xe2ff00)
-.setTimestamp()
-message.channel.send(atasozu)
+
+exports.run = (client, message, args) => {
+  let mesaj = args.slice(0).join(' ');
+if (mesaj.length < 1) return message.reply('Yazmam için herhangi bir şey yazmalısın.');
+  message.delete();
+  message.channel.send('GENEL KOMUTLAR');
+  message.channel.send('8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.');
+  message.channel.send('atasözü: Rastgele atasözü verir.');
+  message.channel.send('avatar: Profil fotoğrafınızı büyük bir biçimde verir.');
+  message.channel.send('bilgi: Bot hakkında bilgi verir.');
+  message.channel.send('botdestek: Botun kurucularına destek mesajı gönderir.');
+  message.channel.send('davet: Botu kendi sunucunuza davet edersiniz.');
+  message.channel.send('döviz: Döviz kurlarını gösterir.');
+  message.channel.send('YÖNETİM KOMUTLARI');
+  message.channel.send('ban: Sunucunuzdan istediğiniz bir kişiyi engellemeye yarar.');
+  message.channel.send('çekiliş: Sunucunuzda çekiliş başlatmanıza yarar.');
+  message.channel.send('BOT Admin Komutları');
+  message.channel.send('dmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.');
 };
+	
+    }
+  }
+
+};
+
 exports.conf = {
-enabled: true,
-guildOnly: false,
-aliases: [],
-permLevel: 0
+  enabled: true,
+  guildOnly: false,
+  aliases: ['h', 'halp', 'help', 'y'],
+  permLevel: 0
 };
 
 exports.help = {
-name: 'yardım',
-description: 'Komutları ve ne işe yaradaklarını gösterir.',
-usage: 'yardım'
+  name: 'yardım',
+  description: 'Tüm komutları gösterir.',
+  usage: 'yardım [komut]'
 };
