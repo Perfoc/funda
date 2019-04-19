@@ -14,7 +14,21 @@ exports.run = (client, message, params) => {
     .setColor(0x00AE86)
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription('Özel mesajlarını kontrol et. :postbox:');
+    .setDescription('GENEL KOMUTLAR');
+    .setDescription('8ball: Bota "Evet-Hayır" Cevaplı sorular sormanıza yarar.');
+    .setDescription('atasözü: Rastgele atasözü verir.');
+    .setDescription('avatar: Profil fotoğrafınızı büyük bir biçimde verir.');
+    .setDescription('bilgi: Bot hakkında bilgi verir.');
+    .setDescription('botdestek: Botun kurucularına destek mesajı gönderir.');
+    .setDescription('davet: Botu kendi sunucunuza davet edersiniz.');
+    .setDescription('döviz: Döviz kurlarını gösterir.');
+    .setDescription('YÖNETİM KOMUTLARI');
+    .setDescription('ban: Sunucunuzdan istediğiniz bir kişiyi engellemeye yarar.');
+    .setDescription('çekiliş: Sunucunuzda çekiliş başlatmanıza yarar.');
+    .setDescription(': ');
+    .setDescription('BOT Admin Komutları');
+    .setDescription('dmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.');
+    
     message.channel.sendEmbed(ozelmesajkontrol) }
   } else {
     let command = params[0];
