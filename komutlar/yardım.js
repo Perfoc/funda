@@ -1,52 +1,38 @@
 const Discord = require('discord.js');
 const ayarlar = require('../ayarlar.json');
-
-var prefix = ayarlar.prefix;
-
+const fs = require("fs");
 exports.run = (client, message, params) => {
-
-  if (!params[0]) {
-    const commandNames = Array.from(client.commands.keys());
-    const longest = commandNames.reduce((long, str) => Math.max(long, str.length), 0);
-  if (message.channel.type !== 'dm') {
-    const ozelmesajkontrol = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .setAuthor(message.author.username, message.author.avatarURL)
-	.setDescription('Özel Mesajları Kontrol Et');
-    
-    message.channel.sendEmbed(ozelmesajkontrol) }
-  } else {
-    let command = params[0];
-    if (client.commands.has(command)) {
-      command = client.commands.get(command);
-	message.author.sendCode('GENEL KOMUTLAR');
-    message.author.sendCode('8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.');
-    message.author.sendCode('atasözü: Rastgele atasözü verir.');
-    message.author.sendCode('avatar: Profil fotoğrafınızı büyük bir biçimde verir.');
-    message.author.sendCode('bilgi: Bot hakkında bilgi verir.');
-    message.author.sendCode('botdestek: Botun kurucularına destek mesajı gönderir.');
-    message.author.sendCode('davet: Botu kendi sunucunuza davet edersiniz.');
-    message.author.sendCode('döviz: Döviz kurlarını gösterir.');
-    message.author.sendCode('YÖNETİM KOMUTLARI');
-    message.author.sendCode('ban: Sunucunuzdan istediğiniz bir kişiyi engellemeye yarar.');
-    message.author.sendCode('çekiliş: Sunucunuzda çekiliş başlatmanıza yarar.');
-    message.author.sendCode('BOT Admin Komutları');
-    message.author.sendCode('dmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.');
-    }
-  }
-
+var Random = [
+    'GENEL KOMUTLAR'
+    '8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.'
+    'atasözü: Rastgele atasözü verir.'
+    'avatar: Profil fotoğrafınızı büyük bir biçimde verir.'
+    'bilgi: Bot hakkında bilgi verir.'
+    'botdestek: Botun kurucularına destek mesajı gönderir.'
+    'davet: Botu kendi sunucunuza davet edersiniz.'
+    'döviz: Döviz kurlarını gösterir.'
+    'YÖNETİM KOMUTLARI'
+    'ban: Sunucunuzdan istediğiniz bir kişiyi engellemeye yarar.'
+    'çekiliş: Sunucunuzda çekiliş başlatmanıza yarar.'
+    'BOT Admin Komutları'
+    'dmduyuru: Bütün bot kullanıcılarına özel mesaj gönderir.';
+];
+var atasozuver = Math.floor(Math.random()*Random.length);
+const atasozu= new Discord.RichEmbed()
+.setDescription(`${Random[atasozuver]}`)
+.setColor(0xe2ff00)
+.setTimestamp()
+message.channel.send(atasozu)
 };
-
 exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: ['h', 'halp', 'help', 'y'],
-  permLevel: 0
+enabled: true,
+guildOnly: false,
+aliases: [],
+permLevel: 0
 };
 
 exports.help = {
-  name: 'yardım',
-  description: 'Tüm komutları gösterir.',
-  usage: 'yardım [komut]'
+name: 'yardım',
+description: 'Komutları ve ne işe yaradaklarını gösterir.',
+usage: 'yardım'
 };
