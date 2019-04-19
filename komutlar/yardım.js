@@ -15,7 +15,7 @@ exports.run = (client, message, params) => {
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
     .setDescription('GENEL KOMUTLAR');
-    .setDescription('8ball: Bota "Evet-Hayır" Cevaplı sorular sormanıza yarar.');
+    .setDescription('8ball: Bota Evet-Hayır Cevaplı sorular sormanıza yarar.');
     .setDescription('atasözü: Rastgele atasözü verir.');
     .setDescription('avatar: Profil fotoğrafınızı büyük bir biçimde verir.');
     .setDescription('bilgi: Bot hakkında bilgi verir.');
