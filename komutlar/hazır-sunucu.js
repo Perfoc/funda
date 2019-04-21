@@ -10,7 +10,7 @@ time: 30000,
 errors: ['time'],
 })
 .then((collected) => {
-        //message.guild.createCategory(`Test`)
+        message.guild.createCategory(`Test`);
         message.guild.createChannel(`mod-log`);
         message.guild.createChannel(`ceza-tekip-listesi`);
         message.guild.createChannel(`yetkili-alımı`);
