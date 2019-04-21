@@ -11,7 +11,7 @@ errors: ['time'],
 })
 .then((collected) => {
         //message.guild.createCategory(`Test`);
-        voice.guild.createChannel(`Ses Kanalı`)
+        voice.guild.createChannel(`Ses Kanalı`);
         message.guild.createChannel(`mod-log`);
         message.guild.createChannel(`ceza-tekip-listesi`);
         message.guild.createChannel(`yetkili-alımı`);
