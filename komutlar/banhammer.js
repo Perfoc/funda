@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
 
   const embed = new Discord.RichEmbed()
     .setColor(0xf4b942)
-    .setField(`${user.username}` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
+    .setField(`${user.username}`, `${message.author.username}#${message.author.discriminator}`, " Tarafından Havaya Uçuruldu!")
     .setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif");
   return message.channel.sendEmbed(embed);
 };
