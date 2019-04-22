@@ -18,11 +18,6 @@ exports.run = (client, message, args) => {
   if (message.mentions.users.size < 1) return message.reply('Kimi banlayacağını yazmalısın.').catch(console.error);
   if (!message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
   message.guild.ban(user, 2);
-  const embedhammer = new Discord.RichEmbed()
-		.setColor(0xf4b942)
-		.setDescription(`${user.username}#${user.discriminator} (${user.id})` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
-		.setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif")
-		message.channel.send(embedhammer);
 
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
@@ -32,6 +27,12 @@ exports.run = (client, message, args) => {
     .addField('Yetkili:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Sebep', reason);
   return guild.channels.get(modlog.id).sendEmbed(embed);
+	
+  const embedhammer = new Discord.RichEmbed()
+    .setColor(0xf4b942)
+    .setDescription(`${user.username}#${user.discriminator} (${user.id})` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
+    .setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif")
+    return message.channel.send(embedhammer);
 };
 
 exports.conf = {
