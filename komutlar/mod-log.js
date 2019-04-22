@@ -11,7 +11,7 @@ errors: ['time'],
 })
 .then((collected) => {
         message.guild.createChannel(`mod-log`);
-        message.channel.send(`mod-log kanalını oluşturdum. Artık bot kusursuz bir biçimde çalışabilir.`);
+        message.channel.send("`mod-log` kanalını oluşturdum. Artık bot kusursuz bir biçimde çalışabilir.");
     });
 });
 };
