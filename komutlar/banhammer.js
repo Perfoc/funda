@@ -17,20 +17,11 @@ exports.run = (client, message, args) => {
   if (!message.guild.member(user).bannable) return message.reply('Yetkilileri banlayamam.');
   message.guild.ban(user, 2);
 
-  /*const embed = new Discord.RichEmbed()
-    .setColor(0x00AE86)
-    .setTimestamp()
-    .addField('Eylem:', 'Ban Hammer')
-    .addField('Kullanıcı:', `${user.username}#${user.discriminator} (${user.id})`)
-    .addField('Yetkili:', `${message.author.username}#${message.author.discriminator}`)
-    .addField('Sebep', reason);
-  return guild.channels.get(modlog.id).sendEmbed(embed);*/
-	
-  const embedhammer = new Discord.RichEmbed()
+  const embed = new Discord.RichEmbed()
     .setColor(0xf4b942)
     .setField(`${user.username}#${user.discriminator} (${user.id})` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
     .setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif");
-    return message.channel.send(embedhammer);
+  return message.channel.sendEmbed(embed);
 };
 
 exports.conf = {
