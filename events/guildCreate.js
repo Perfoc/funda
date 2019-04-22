@@ -6,11 +6,11 @@ var prefix = ayarlar.prefix;
 
 const girismesaj = [
   'Bot Perfo tarafından geliştirilmektedir',
-  'Botumuzun özelliklerini öğrenmek için :yardım komutunu kullanabilirsin.',
+  'Botumuzun özelliklerini öğrenmek için ?yardım komutunu kullanabilirsin.',
   '**ÖNEMLİ:** Botun kullanması için mod-log kanalı açın ve deneme için',
-  '!uyarı komutunu kullanın.',
+  '?mod-log komutunu kullanın.',
   '',
-  `**Discord Sunucusu: ** https://discord.gg/esZ3tYb`
+  `**Discord Sunucusu: ** https://discord.gg/xnSjkSk`
 ]
 
 client.on('guildCreate', guild => {
