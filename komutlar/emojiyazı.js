@@ -28,7 +28,7 @@ exports.run = function(client, message, args) {
 	if (args.length < 1) return message.reply('Lütfen bir mesaj belirt. **Doğru Kullanım**: ?emojiyazı <mesaj>')
 		
 	message.channel.send(args.join(' ').split('').map(c => mapping[c] || c).join(' '));
-
+	message.delete();
 };
 
 exports.conf = {
