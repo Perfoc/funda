@@ -32,7 +32,7 @@ exports.run = (client, message, args) => {
     .setColor(0xf4b942)
     .setField(`${user.username}#${user.discriminator} (${user.id})` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
     .setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif");
-    return message.channel.send(embedhammer);
+    return message.channel.sendEmbed(embedhammer);
 };
 
 exports.conf = {
