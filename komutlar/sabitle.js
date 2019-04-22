@@ -10,6 +10,7 @@ exports.run = async (client, message, args, level) => {
   } catch (err) {
     message.channel.send('Bir hata oluştu!\n' + err).catch();
   }
+  message.delete();
 };
 
 exports.conf = {
