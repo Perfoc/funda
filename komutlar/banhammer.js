@@ -30,8 +30,8 @@ exports.run = (client, message, args) => {
 	
   const embedhammer = new Discord.RichEmbed()
     .setColor(0xf4b942)
-    .setDescription(`${user.username}#${user.discriminator} (${user.id})` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
-    .setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif")
+    .setField(`${user.username}#${user.discriminator} (${user.id})` + ", " + `${message.author.username}#${message.author.discriminator}` + "Tarafından Havaya Uçuruldu!")
+    .setThumbnail("https://image.prntscr.com/image/wAH5Rm0oRkKxkM4kjz-trw.gif");
     return message.channel.send(embedhammer);
 };
 
