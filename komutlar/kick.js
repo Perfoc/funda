@@ -14,10 +14,8 @@ exports.run = (client, message, args) => {
   if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum.');
   if (reason.length < 1) return message.reply('Sunucudan atma sebebini yazmalısın.');
   if (message.mentions.users.size < 1) return message.reply('Kimi sunucudan atacağını yazmalısın.').catch(console.error);
-
   if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan atamam.');
   message.guild.member(user).kick();
-  message.delete();
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
@@ -26,6 +24,7 @@ exports.run = (client, message, args) => {
     .addField('Yetkili:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Sebep', reason);
   return guild.channels.get(modlog.id).sendEmbed(embed);
+  message.delete();
 };
 
 exports.conf = {
