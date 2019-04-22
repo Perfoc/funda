@@ -4,7 +4,6 @@ exports.run = async (client, message, args, level) => {
       if (!Array.from(messages.keys())[1]) return message.reply('Bir mesaj göndermelisin ');
       let msg = messages.get(Array.from(messages.keys())[1]);
       msg.pin();
-      message.channel.send('Mesaj sabitlendi.');
       message.delete();
     });
   } catch (err) {
