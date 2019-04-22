@@ -10,6 +10,7 @@ exports.run = (client, message, args) => {
   let guild = message.guild
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
+  message.delete();
   let modlog = guild.channels.find('name', 'mod-log');
   if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum.');
   if (reason.length < 1) return message.reply('Sunucudan atma sebebini yazmalısın.');
@@ -24,7 +25,6 @@ exports.run = (client, message, args) => {
     .addField('Yetkili:', `${message.author.username}#${message.author.discriminator}`)
     .addField('Sebep', reason);
   return guild.channels.get(modlog.id).sendEmbed(embed);
-  message.delete();
 };
 
 exports.conf = {
