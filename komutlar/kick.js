@@ -17,7 +17,7 @@ exports.run = (client, message, args) => {
 
   if (!message.guild.member(user).kickable) return message.reply('Yetkilileri sunucudan atamam.');
   message.guild.member(user).kick();
-
+  message.delete();
   const embed = new Discord.RichEmbed()
     .setColor(0x00AE86)
     .setTimestamp()
