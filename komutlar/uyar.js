@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
   let reason = args.slice(1).join(' ');
   let user = message.mentions.users.first();
   let modlog = guild.channels.find('name', 'mod-log');
-  if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum.');
+  if (!modlog) return message.reply('`mod-log` kanalını bulamıyorum. ?mod-log yazarak kanalı oluşturabilirsin.');
   if (reason.length < 1) return message.reply('Uyarı sebebini yazmalısın.');
   if (message.mentions.users.size < 1) return message.reply('Kimi uyaracağını yazmalısın.').catch(console.error);
   const embed = new Discord.RichEmbed()
