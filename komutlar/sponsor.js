@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = function(client, message) {
-    message.channel.send("Funda BOT bu site sayesinde yapılıyor: `MemoryHackers.org`");
+    message.channel.send("O Kadar gelişmedik dostum. Eğer istersen **Perfo#2814** kullanıcı adlı kişiye ulaşabilirsiniz.");
 };
 
 exports.conf = {
