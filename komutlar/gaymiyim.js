@@ -11,7 +11,7 @@ var cevapver = Math.floor(Math.random()*Random.length);
 const cevap= new Discord.RichEmbed()
 .setDescription(`${Random[cevapver]}`)
 .setColor(0xe2ff00)
-//.setTimestamp()
+.setTimestamp()
 message.channel.send(cevap)
 
 exports.conf = {
