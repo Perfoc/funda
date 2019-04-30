@@ -1,18 +1,18 @@
 const Discord = require('discord.js');
-const ayarlar = require('../ayarlar.json');
-const fs = require("fs");
-exports.run = (client, message, params) => {
-var Random = [
-'**Evet Gaysin!**',
-'**Sen Gay Olamazsın!**',
-'**Bilemedim, tekrar sor.**',
+
+const cevaplar = [
+    "Evet!",
+    "Hayır!",
+    "Bilemedim, tekrar sor."
 ];
-var cevapver = Math.floor(Math.random()*Random.length);
-const cevap= new Discord.RichEmbed()
-.setDescription(`${Random[cevapver]}`)
-.setColor(0xe2ff00)
-.setTimestamp()
-message.channel.send(cevap)
+
+exports.run = function(client, message, args) {
+    var soru = args.join(' ');
+
+    var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
+    message.channel.send(cevap)
+
+};  
 
 exports.conf = {
   enabled: true, 
