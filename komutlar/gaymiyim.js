@@ -1,8 +1,8 @@
 const Discord = require('discord.js');
 
 const cevaplar = [
-    "Evet!",
-    "Hayır!",
+    "Kesinlikle Gaysin!",
+    "Sen Gay Olamazsın!",
     "Bilemedim, tekrar sor."
 ];
 
