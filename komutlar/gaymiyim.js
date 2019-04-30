@@ -7,7 +7,7 @@ const cevaplar = [
 ];
 
 exports.run = function(client, message, args) {
-    var soru = args.join(' ');
+    var soru = args.join('Gay miyim?');
 
     var cevap = cevaplar[Math.floor(Math.random() * cevaplar.length)];
     message.channel.send(cevap)
