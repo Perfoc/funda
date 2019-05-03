@@ -4,12 +4,12 @@ exports.run = (client, message, args) =>{
 
     if(setStatus[1] === 'aktif'){
         client.user.setAFK(true);
-        message.channel.send("Durumunuz afk olarak ayarlandı!");
+        message.channel.send("Durumunuz `AFK` olarak ayarlandı!");
     }
 
     else if(setStatus[1] === 'deaktif'){
         client.user.setAFK(false);
-        message.channel.send(`${message.author} artık AFK değil. Hoş geldin dostum.`);
+        message.channel.send(`${message.author}` + "artık `AFK` değil. Hoş geldin dostum.");
     }
 
     else if(!setStatus[1] || setStatus[1] === undefined){
@@ -17,7 +17,7 @@ exports.run = (client, message, args) =>{
     }
 
     else{
-        message.channel.send("Mevcut durum olarak aktif veya deaktif seçmediniz!");
+        message.channel.send("Mevcut durum olarak `aktif` veya `deaktif` seçmediniz!");
     }
 
 }
