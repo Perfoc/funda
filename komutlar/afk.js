@@ -1,22 +1,23 @@
+const Discord = require('discord.js');
 exports.run = (client, message, args) =>{
     const setStatus = message.content.split(' ');
 
-    if(setStatus[1] === 'afk'){
+    if(setStatus[1] === 'aktif'){
         client.user.setAFK(true);
-        message.channel.send("Your status has been set to afk!");
+        message.channel.send("Durumunuz afk olarak ayarlandı!");
     }
 
-    else if(setStatus[1] === 'notafk'){
+    else if(setStatus[1] === 'deaktif'){
         client.user.setAFK(false);
-        message.channel.send(`Welcome back ${message.author}`);
+        message.channel.send(`${message.author} artık AFK değil. Hoş geldin dostum.`);
     }
 
     else if(!setStatus[1] || setStatus[1] === undefined){
-        message.channel.send("You did not choose afk or notafk as current status!");
+        message.channel.send("Mevcut durum olarak `aktif` veya `deaktif` seçmediniz!");
     }
 
     else{
-        message.channel.send("You did not choose afk or notafk as current status!");
+        message.channel.send("Mevcut durum olarak aktif veya deaktif seçmediniz!");
     }
 
 }
@@ -31,5 +32,5 @@ exports.conf = {
 exports.help = {
   name: 'afk',
   description: 'AFK kaldığınızı belirtmenize yarar.',
-  usage: 'afk <sebep>'
+  usage: 'afk <aktf-deafktif>'
 };
