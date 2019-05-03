@@ -34,6 +34,12 @@ Pornsearch.search(searchString)
 
 
 }
+exports.conf = {
+  enabled: true,
+  guildOnly: false,
+  aliases: ['ara', 'pornhub', 'porn', 'hub', 'tube', 'search'],
+  permLevel: 0
+}
 
 module.exports.help = {
     name: "pornhub",
