@@ -4,11 +4,11 @@ const ayarlar = require('../ayarlar.json');
 exports.run = (bot, message, params) => {
     message.delete();
     const embed = new Discord.RichEmbed()
-        .setColor("#36393F")
-        .setAuthor(message.guild.name, message.guild.userURL)
+        .setColor("#9700ff")
+        .setAuthor('Sunucu adı: ' + message.guild.name, message.guild.userURL)
         .setThumbnail(message.guild.iconURL)
         .addField('Varsayılan rol:', message.guild.defaultRole, true)
-        .addField('Roller:', message.guild.roles.map(role => role.name).join(', '), true)
+        .addField('Tüm Roller:', message.guild.roles.map(role => role.name).join(', '), true)
         .setTimestamp()
     message.channel.send({
         embed
