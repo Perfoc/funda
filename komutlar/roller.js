@@ -13,7 +13,7 @@ exports.run = (bot, message, params) => {
     message.channel.send({
         embed
     });
-    message.react('✅')
+    message.react(':white_check_mark:')
 };
 
 exports.conf = {
