@@ -5,10 +5,10 @@ exports.run = (bot, message, params) => {
     message.delete();
     const embed = new Discord.RichEmbed()
         .setColor("#9700ff")
-        .setAuthor('Sunucu adı: ' + message.guild.name, message.guild.userURL)
+        .setAuthor(':white_check_mark: **Sunucu adı:** ' + message.guild.name, message.guild.userURL)
         .setThumbnail(message.guild.iconURL)
-        .addField('Varsayılan rol:', message.guild.defaultRole, true)
-        .addField('Tüm Roller:', message.guild.roles.map(role => role.name).join(', '), true)
+        .addField(':white_check_mark: **Varsayılan rol:**', message.guild.defaultRole, true)
+        .addField(':white_check_mark: **Tüm Roller:**', message.guild.roles.map(role => role.name).join(', '), true)
         .setTimestamp()
     message.channel.send({
         embed
