@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 exports.run = function(client, message) {
-    message.channel.send("Komutları görmek için bu linke tıklayabilirsiniz -> https://is.gd/FKomutlar");
+    message.channel.send("Komutları görmek için bu linke tıklayabilirsiniz -> https://kisa.link/funda");
 };
 
 exports.conf = {
