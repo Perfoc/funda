@@ -7,7 +7,7 @@ module.exports.run = async (Octopus, message, args) => {
   let embed = new Discord.RichEmbed()
   .setTitle(`Anket: ${args}`.split(',').join(' '))
   .setColor("#ffff00")
-  .setDescription(`Anketi Başlatan ${message.author.username}`);
+  .setDescription(`Anketi Başlatan: **${message.author.username}**`);
 
   return message.channel.send(embed).then(message.delete())
 
