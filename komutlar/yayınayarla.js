@@ -31,7 +31,7 @@ exports.run = (client, message, args) => {
   }
 
   else if (status.length !== 0) {
-   client.user.setPresence({ game: { name: `${status}`, url: 'https://twitch.tv/FundaDiscordBotu', type: 1 } });
+   client.user.setPresence({ game: { name: `${status}`, url: 'https://discord.gg/pQfp4jz', type: 1 } });
   const embed = new Discord.RichEmbed()
     .setColor("#00FF00")
     .setTitle(':shield: Canlı Yayın Statüsü Değiştirme :shield:')
