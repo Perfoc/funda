@@ -25,8 +25,6 @@ exports.conf = {
   guildOnly: false,
   aliases: ["davet-sırası"],
   permLevel: 0,
-  kategori: "sunucu",
-
 };
 
 exports.help = {
